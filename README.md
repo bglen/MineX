@@ -1,7 +1,8 @@
 MineX
 =====
 
-2.5D space shooter/open world iOS concept currently being worked on. Made with Unity 4.
+2.5D space shooter/open world iOS game currently being worked on. Made with Unity 4.
+
 
 Potential Features:
 Gameplay:
@@ -9,7 +10,7 @@ Gameplay:
   - player can mine asteroids for the chance of harvesting ores and materials, which they can sell for profit
     - rare ores are more valuable and occur less often
   - fuel limit causes player to have limited range away from planets
-  - Sandbox Non - Linear Gameplay, similar to Minecraft
+  - Sandbox/Non-Linear Gameplay, similar to Minecraft
   - 3D projected as 2.5D shooter
   - enemy ai will seek you out as you noteriety goes up
   - space stations
@@ -56,4 +57,3 @@ To Do:
   - add in bottom skybox for starmap(selects randomly from a list)
   - touch controls for ship(add weapons control too since it is dependent on a touch control)
   - basic ai
-  - 
