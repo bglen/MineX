@@ -45,6 +45,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\GenerateMap.js" />
+     <Compile Include="Assets\SpinScript.js" />
+     <Compile Include="Assets\TestMovement.js" />
+     <Compile Include="Assets\TouchJoystick.js" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

@@ -14,7 +14,7 @@ var target : Transform;
 // The distance in the x-z plane to the target
 var distance = 10.0;
 // the height we want the camera to be above the target
-var height = 5.0;
+var height = 20.0;
 // How much we 
 var heightDamping = 2.0;
 var rotationDamping = 3.0;

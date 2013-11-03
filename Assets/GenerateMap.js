@@ -3,7 +3,7 @@
 var size;
 var totalSkyboxes;
 
-function generateMap(size){
+//function generateMap(size){
 	//draw random number, 1 to totalSyboxes
 	//select case and apply skybox to main camera
 	
@@ -16,10 +16,10 @@ function generateMap(size){
 	//else, draw asteroids, add to asteroid array
 	
 	//space stations and other stuff
-
+//}
 function Start () {
 	//set size to player's input
-	generateMap(size);
+	//generateMap(size);
 }
 
 function Update () {
