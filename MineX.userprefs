@@ -1,6 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerMovement.js">
+    <Files>
+      <File FileName="Assets/JoystickController.js" Line="8" Column="14" />
+      <File FileName="Assets/PlayerMovement.js" Line="14" Column="1" />
+      <File FileName="Assets/GenerateMap.js" Line="19" Column="37" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

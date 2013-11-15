@@ -1,55 +1,49 @@
 #pragma strict
-//attach to joystich gui element
-//todo next:
-//change rotation of player ship
-//
-//draw joystick dot:
-//
-//if beganInJoystick
-//	if touch position is in joystick{
-//		draw joystick dot at touch position
-//	}else{
-//		draw joystick at same slope as position but at edge of joystick
-//	}
-//}
-//if ended/cancelled{
-//	do not draw dot
-//}
+var startPosition : Vector2;
+var currentPosition : Vector2;
+var onCorrectSide = false;
+var touchAmount = 0;
 
-var joystickRadius = 20;//radius of joystick circle on screen in pixels
-var outsideRadius = false;
-var beganInJoystick = false;
-var joystickOrigin : Vector2;
+//implement later:
+//fire button
+//control schemes(left or right)
 
 function Start () {
 
 }
 
 function Update () {
+
+//rewrite for velocity and merge with player movement script
 	for (var touch : Touch in Input.touches) {
 		if(touch.fingerId == 1){//if first finger
 			if (touch.phase == TouchPhase.Began) {//if touch began
-				if(Vector2.Distance(touch.position, joystickOrigin) < joystickRadius){//if began inside the joystick
-					beganInJoystick = true;
-					//fix this
-					PlayerMovement.nextSpeed = PlayerMovement.maxSpeed * Vector2.Distance(touch.position, joystickOrigin)/joystickRadius;
+			touchAmount++;
+				if(touch.position.x < Screen.width){//if began inside the joystick
+					onCorrectSide = true;
+					startPosition = touch.position;
 				}else{
-					beganInJoystick = false;
+					onCorrectSide = false;
 				}
 			}
 			if(touch.phase == TouchPhase.Moved){
-				if(beganInJoystick == true){
-					if(Vector2.Distance(touch.position, joystickOrigin) >= joystickRadius){
-						PlayerMovement.nextSpeed = PlayerMovement.maxSpeed;
-					}else{
-						//fix this
-						PlayerMovement.nextSpeed = PlayerMovement.maxSpeed * Vector2.Distance(touch.position, joystickOrigin)/joystickRadius;
-					}
+				if(onCorrectSide){
+					currentPosition = touch.position;
+					var relativePosition : Vector2;
+					
+					relativePosition = startPosition - currentPosition;
+					
+				}
+													
+				if((Vector2.Distance(currentPosition, startPosition) / 100) > 1){
+					PlayerMovement.nextSpeed = PlayerMovement.maxSpeed;
+				}else{
+					PlayerMovement.nextSpeed = PlayerMovement.maxSpeed * Vector2.Distance(currentPosition, startPosition) / 100;
 				}
 			}
 			if(touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled){
 				PlayerMovement.nextSpeed = 0;
-				beganInJoystick = false;
+				onCorrectSide = false;
 			}
 		}
 	}

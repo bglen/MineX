@@ -7,6 +7,5 @@ function Start () {
 }
 
 function Update () {
-	 transform.position = CameraTarget.transform.position;
-	 transform.rotation = Quaternion(0, 180, 180, 0);
+	 transform.position = Vector3(CameraTarget.transform.position.x, CameraTarget.transform.position.y ,20);
 }

@@ -4,6 +4,8 @@ var size;
 var totalSkyboxes;
 var asteroidAmount = 250;
 var planetAmount = 10;
+var maxX = 50;
+var maxY = 50;
 var x : int;
 var z : int;
 var collides = false;
@@ -19,8 +21,8 @@ function generateMap(){
 	//space stations and other stuff
 	for (var i=0; i < asteroidAmount; i++){ 
 		collides = false;
-		x = Random.Range(-100, 100);
-	 	z = Random.Range(-100, 100);
+		x = Random.Range(-maxX, maxX);
+	 	z = Random.Range(-maxY, maxY);
 	 	for(a = 0; a <= asteroidArrayX.length - 1; a++){
 	 		b = asteroidArrayX.length - 1;
 	 		if(x == asteroidArrayX[b] && z == asteroidArrayZ[b]){//check if both equal x and y
