@@ -46,10 +46,12 @@
   <ItemGroup>
      <Compile Include="Assets\GenerateMap.js" />
      <Compile Include="Assets\JoystickController.js" />
+     <Compile Include="Assets\MovementMotor.js" />
      <Compile Include="Assets\PlayerMovement.js" />
      <Compile Include="Assets\SkyBoxFollow.js" />
      <Compile Include="Assets\SpinScript.js" />
      <Compile Include="Assets\TestMovement.js" />
+     <Compile Include="Assets\screenshots\PlayerMotor.js" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
