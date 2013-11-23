@@ -1,7 +1,7 @@
 MineX
 =====
 
-2.5D space shooter/open world iOS game currently being worked on. Made with Unity 4.
+2.5D space shooter/open world iOS/OSX/Windows game currently being worked on. Made with Unity 4 and the RAIN{indie} AI pathfinding plugin.
 
 
 Potential Features:
@@ -26,7 +26,7 @@ Gameplay:
       - hold hostages for ransom
     - friendly stations can be docked with and traded with
   - friendly planets can be landed on and traded with
-  - blow up planets and shit
+  - blow up planets, and space stations
   - research weapons/tech(probably will require space station)
   - hold whole planets hostage(why not?)
 
@@ -42,18 +42,32 @@ Maps:
   - 1 sun per map, 5x more gravitational pull than planets(relativyl unrealistic, but for gameplay purposes)
 
 To Do:
-  - basic models
-    - 2 ship models(1 player)
-    - 3 or 4 asteriod models
-    - planet model(basicly a low poly sphere)
-    - sun model will just be scaled up planet w/ sun texture & effects/animations
-    - textures for all
+    - more ship models
+    - textures for ship models
+    - attempt making a planet that looks decent
+    - sun model will just be scaled up planet w/ sun texture & effects/animations - above
+    - textures for all - textures for 2 asteroids done
+  - inventory - in progress
+  - weapons
+  - enemy ships
   - basic effects(engine glare, weapon fire)
   - code in random level generation for:
-    - asteriods, then
     - planets
       - boundaries of where planets can spawn change depending on map size
         - also result in slighty different map sizes each time
-  - add in bottom skybox for starmap(selects randomly from a list)
-  - touch controls for ship(add weapons control too since it is dependent on a touch control)
-  - basic ai
+  - randomized skybox
+  - touch movement(in progress, needs to be tested)
+
+Currently Done:
+  - created menuScene
+  - created tradeScene
+  - created gameScene
+  - 1 player model
+  - 2 asteroid models
+  - player ship follows mouse
+  - player movement(needs to be worked on)
+  - simple parallex w/ camera and skybox(camera - map parallex needs to be reduced)
+  - half sphere skybox w/ 1 star texture
+  - map generation
+    - random asteroids
+  - global lighting
